@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EasyDoc | Inteligência na Digitalização de Documentos</title>
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900 justify-center">
+		<header
+			id="header"
+			class="fixed top-10 left-1/2 transform -translate-x-1/2 flex flex-row gap-4 items-center justify-between w-[95%] bg-white px-8 py-2 rounded-3xl bg-opacity-90 font-easy-p font-normal text-sm z-20"
+		>
+			<img src="assets/header_icon.svg" class="w-26 h-30" />
+			<div class="hidden lg:flex lg:gap-4">
+				<nav class="flex flex-row gap-4">
+					<a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+						Home
+					</a>
+					<a
+						href="#"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex flex-row items-center gap-1"
+					>
+						Soluções
+						<i
+							><svg
+								width="11"
+								height="6"
+								viewBox="0 0 11 6"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5.5 5L1.5 1H9.5L5.5 5Z"
+									fill="#BBBBBB"
+									stroke="#CCCCCC"
+									stroke-width="2"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</i>
+					</a>
+					<a
+						href="#"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex flex-row items-center gap-1"
+					>
+						Produtos
+						<i
+							><svg
+								width="11"
+								height="6"
+								viewBox="0 0 11 6"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M5.5 5L1.5 1H9.5L5.5 5Z"
+									fill="#BBBBBB"
+									stroke="#CCCCCC"
+									stroke-width="2"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</i>
+					</a>
+					<a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+						Cases
+					</a>
+					<a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+						Blog
+					</a>
+					<a href="#" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center gap-1">
+						Institucional
+					</a>
+				</nav>
+				<div class="flex flex-row items-center gap-2">
+					<button
+						class="box-red px-[0.5rem] xl:px-4 py-2 rounded-3xl text-xs font-semibold"
+					>
+						Solicitar Demonstração
+					</button>
+					<button class="flex flex-row items-center gap-1">
+						<svg
+							width="11"
+							height="12"
+							viewBox="0 0 11 12"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M10.8 9.89835V10.8742C10.8 11.4961 10.2816 12 9.64183 12H1.15817C0.5184 11.998 0 11.4941 0 10.8742V9.89835C0 8.15864 1.45029 6.74888 3.24 6.74888H3.6432C4.18011 6.98884 4.77463 7.12481 5.4 7.12481C6.02537 7.12481 6.62194 6.98884 7.1568 6.74888H7.56C9.34766 6.74888 10.8 8.15864 10.8 9.89835ZM2.31429 2.9995C2.31429 1.34178 3.69463 0 5.4 0C7.10537 0 8.48571 1.34178 8.48571 2.9995C8.48571 4.65722 7.10537 5.999 5.4 5.999C3.69463 5.999 2.31429 4.65722 2.31429 2.9995Z"
+								fill="#999999"
+							/>
+						</svg>
+						Login
+					</button>
+					<button class="flex flex-row items-center gap-1">
+						<svg
+							width="13"
+							height="12"
+							viewBox="0 0 13 12"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12.2743 7.78247C12.0059 8.64532 11.5476 9.42561 10.9511 10.0717C10.8582 10.1729 10.7116 10.1956 10.594 10.1274L9.5639 9.53295C9.12835 9.90245 8.63086 10.1914 8.0921 10.3814V11.5724C8.0921 11.7087 7.99714 11.8263 7.86503 11.8552C7.02076 12.0431 6.11043 12.0534 5.2228 11.8552C5.09069 11.8263 4.99574 11.7087 4.99574 11.5724V10.3814C4.45697 10.1935 3.95742 9.90451 3.52393 9.53295L2.49388 10.1274C2.37828 10.1956 2.22759 10.1708 2.13676 10.0717C1.5402 9.42354 1.08194 8.64532 0.813584 7.78247C0.774363 7.65243 0.828034 7.51206 0.945695 7.44394L1.97575 6.84944C1.87254 6.28796 1.87254 5.71204 1.97575 5.15057L0.945695 4.55606C0.828034 4.48794 0.772299 4.34758 0.813584 4.21753C1.08194 3.35468 1.5402 2.57439 2.13676 1.92828C2.22965 1.82714 2.37621 1.80443 2.49388 1.87255L3.52187 2.46705C3.95742 2.09755 4.4549 1.80856 4.99367 1.61865V0.427582C4.99367 0.291342 5.08863 0.17368 5.22074 0.144781C6.06501 -0.0430652 6.97534 -0.0533864 7.86297 0.144781C7.99508 0.17368 8.09003 0.291342 8.09003 0.427582V1.61452C8.6288 1.80237 9.12835 2.09136 9.56184 2.46292L10.5919 1.86842C10.7075 1.8003 10.8582 1.82507 10.949 1.92416C11.5456 2.57233 12.0038 3.35055 12.2722 4.2134C12.3114 4.34345 12.2577 4.48381 12.1401 4.55193L11.11 5.14644C11.2132 5.70791 11.2132 6.28383 11.11 6.84531L12.1401 7.43981C12.2577 7.50999 12.3093 7.6483 12.2743 7.78247ZM8.47605 5.9969C8.47605 4.92969 7.607 4.06065 6.53979 4.06065C5.47258 4.06065 4.60353 4.92969 4.60353 5.9969C4.60353 7.06412 5.47258 7.93316 6.53979 7.93316C7.607 7.93316 8.47605 7.06412 8.47605 5.9969Z"
+								fill="#999999"
+							/>
+						</svg>
+						Suporte
+					</button>
+				</div>
+			</div>
+			<div class="lg:hidden">
+				<button id="menu-toggle" style="z-index: 20">
+					<svg
+						id="menu-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+			</div>
+			<div
+				id="mobile-menu"
+				class="hidden rounded-b-3xl absolute w-full top-11 left-0 bg-white z-10"
+			>
+				<div class="flex flex-col pl-4">
+					<a href="#" class="py-2 text-lg">Home</a>
+					<a href="#" class="py-2 text-lg">Soluções</a>
+					<a href="#" class="py-2 text-lg">Produtos</a>
+					<a href="#" class="py-2 text-lg">Cases</a>
+					<a href="#" class="py-2 text-lg">Blog</a>
+					<a href="#" class="py-2 text-lg">Institucional</a>
+				</div>
+			</div>
+		</header>
+		<main class="flex flex-col">
+			<section
+				class="bg-[url('assets/Base.png')] bg-cover bg-center pt-32 min-h-3/5 relative"
+			>
+				<div
+					class="md:w-[60%] pb-32 xl:pb-40 mx-auto flex flex-col gap-6 justify-center items-center text-white"
+				>
+					<h1
+						class="text-4xl w-[80%] text-center font-bold font-easy-H1"
+					>
+						Adeus, canhotos problemáticos: elimine perdas e
+						conquiste eficiência com a Easy Doc
+					</h1>
+					<p class="max-sm:w-[80%] text-center font-easy-p font-thin">
+						Saiba como a digitalização de comprovantes de entrega
+						pode
+						<span class="font-bold"
+							>transformar a operação da sua transportadora,
+							acelerando pagamentos, reduzindo custos</span
+						>
+						e elevando a satisfação dos clientes.
+					</p>
+					<button
+						class="font-readex-pro px-6 py-4 flex flex-row gap-2 items-center rounded-sm box-white shadow-xl"
+					>
+						Fale com um consultor
+						<svg
+							width="13"
+							height="13"
+							viewBox="0 0 13 13"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12.5787 1.1967C12.5787 0.644416 12.131 0.196701 11.5787 0.196701L2.57874 0.196701C2.02645 0.196701 1.57874 0.644416 1.57874 1.1967C1.57874 1.74899 2.02645 2.1967 2.57874 2.1967L10.5787 2.1967L10.5787 10.1967C10.5787 10.749 11.0265 11.1967 11.5787 11.1967C12.131 11.1967 12.5787 10.749 12.5787 10.1967L12.5787 1.1967ZM10.8716 0.489594L0.265027 11.0962L1.67924 12.5104L12.2858 1.90381L10.8716 0.489594Z"
+								fill="#D10010"
+								class="svg-path"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div
+					class="rounded-xl mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[80%] z-10 w-[90%] md:w-[60%] aspect-video"
+				>
+					<iframe
+						class="rounded-xl w-full h-[50vh] lg:h-[70vh]"
+						src="https://www.youtube.com/embed/UF_mZpPoYQ4?si=BGZEZ8j2AV6lH265&amp;controls=0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+			</section>
+			<section
+				class="flex flex-col gap-12 w-[80%] mx-auto pt-[calc(50vh-4rem)] md:pt-[calc(50vh-2rem)] lg:pt-[calc(70vh-4rem)]"
+			>
+				<div class="flex flex-col gap-4 text-center mx-auto md:w-[80%]">
+					<h1 class="font-easy-H1">
+						Dois problemas, sérias consequências
+					</h1>
+					<p>
+						Atualmente, muitas transportadoras possuem 2 desaﬁos na
+						sua operação junto a seus clientes:
+					</p>
+					<div class="flex flex-col md:flex-row justify-between mt-4">
+						<div
+							class="flex flex-row items-center gap-2 bg-[#FFF6F7] px-4 py-4 rounded-3xl md:w-[48%]"
+						>
+							<img
+								class="bg-red-500 p-2 w-14 h-10 rounded-full"
+								src="assets/exclamation.svg"
+								alt="Exclamation Icon"
+							/>
+							<p class="font-easy-p-reduzida">
+								<span class="font-bold"
+									>Dificuldade na obtenção de
+									comprovantes</span
+								>
+								de entrega digitais de qualidade junto aos seus
+								motoristas.
+							</p>
+						</div>
+						<div
+							class="flex flex-row items-center gap-2 bg-[#FFF6F7] px-4 py-4 rounded-3xl md:w-[48%]"
+						>
+							<img
+								class="bg-red-500 py-2 w-[4.5rem] h-10 rounded-full"
+								src="assets/dexclamation.svg"
+								alt="Exclamation Icon"
+							/>
+							<p class="font-easy-p-reduzida">
+								<span class="font-bold"
+									>Integração adequada a um sistema,</span
+								>
+								para poder disponibilizar informações em tempo
+								real a seus clientes.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col gap-10">
+					<h3 class="font-easy-H3 font-semibold text-center">
+						Essas dificuldades resultam em sérios problemas
+						operacionais, como:
+					</h3>
+					<div class="flex flex-col gap-6">
+						<div
+							class="flex flex-row bg-[#FFF6F7] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-10 h-10 rounded-full"
+								src="assets/coin.svg"
+								alt="Coin Icon"
+							/>
+							<div class="flex flex-col">
+								<h4 class="font-easy-H4 font-semibold">
+									Bloqueio e recusa de pagamentos
+								</h4>
+								<p class="font-easy-p font-medium">
+									Bloqueio e recusa de pagamentos, impactando
+									diretamente o fluxo de caixa da empresa.
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex flex-row bg-[#FFF6F7] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-10 h-10 rounded-full"
+								src="assets/clock.svg"
+								alt="Clock Icon"
+							/>
+							<div class="flex flex-col">
+								<h4 class="font-easy-H4 font-semibold">
+									Perda de tempo e recursos
+								</h4>
+								<p class="font-easy-p font-medium">
+									Perda de tempo e recursos corrigindo
+									problemas com as imagens, entrando em
+									contato com motoristas e lidando com
+									clientes insatisfeitos.
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex flex-row bg-[#FFF6F7] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-10 h-10 rounded-full"
+								src="assets/thumbsdown.svg"
+								alt="Thumbs Icon"
+							/>
+							<div class="flex flex-col">
+								<h4 class="font-easy-H4 font-semibold">
+									Impacto negativo na imagem
+								</h4>
+								<p class="font-easy-p font-medium">
+									Impacto negativo na imagem da empresa, pela
+									falta de agilidade na comprovação de
+									entregas - inclusive colocando futuras
+									negociações em risco.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="md:w-[60%] mx-auto" src="assets/CTA.png" />
+			</section>
+			<section class="flex flex-col lg:flex-row mt-12 w-full">
+				<img class="lg:w-[50%] h-auto" src="assets/printer.png" />
+				<div
+					class="lg:w-[50%] flex flex-col gap-6 h-auto pl-14 pt-14 bg-[#F4F4F4]"
+				>
+					<div class="flex flex-col gap-4 w-[80%] max-sm:text-center">
+						<h3 class="font-easy-H3 font-semibold">
+							Raiz do problema: falta de tecnologia adequada e
+							processos ágeis
+						</h3>
+						<p class="font-easy-p font-medium">
+							É crescente a demanda do mercado por processos
+							digitalizados, ágeis e sem papel. E muitas
+							transportadoras ainda utilizam sistemas que deixam a
+							desejar, com limitações como:
+						</p>
+					</div>
+					<div class="flex flex-col gap-4 mb-4 w-[80%]">
+						<div
+							class="flex flex-row bg-[#FFFFFF] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-11 h-10 rounded-full"
+								src="assets/celular.svg"
+								alt="celular Icon"
+							/>
+							<div class="flex flex-col">
+								<p class="font-easy-p font-normal">
+									<span class="font-bold"
+										>Dependência de fotos de celular</span
+									>
+									sem um sistema que faça a validação da foto.
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex flex-row bg-[#FFFFFF] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-10 h-10 rounded-full"
+								src="assets/integra.svg"
+								alt="Integração Icon"
+							/>
+							<div class="flex flex-col">
+								<p class="font-easy-p font-normal">
+									<span class="font-bold"
+										>Falta de integração</span
+									>
+									entre a captura de comprovantes e o sistema
+									de gestão.
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex flex-row bg-[#FFFFFF] px-4 py-4 rounded-3xl items-center gap-4"
+						>
+							<img
+								class="bg-red-500 p-2 w-11 h-11 rounded-full"
+								src="assets/time.svg"
+								alt="time Icon"
+							/>
+							<div class="flex flex-col">
+								<p class="font-easy-p font-normal">
+									Dificuldade em<span class="font-bold">
+										atender às exigências dos clientes</span
+									>
+									por informações em tempo.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="flex flex-col py-12 w-[80%] mx-auto">
+				<div class="w-[80%] mx-auto lg:mb-12">
+					<p class="font-easy-p font-normal">
+						Com a Easy Doc,<span class="font-bold">
+							sua Transportadora pode experimentar uma
+							transformação significativa nas suas
+							operações,</span
+						>
+						com a Digitalização dos Comprovantes de entrega de forma
+						descentralizada. Essa solução conta com o fornecimento
+						de:
+					</p>
+				</div>
+
+				<div>
+					<div class="flex flex-col-reverse mb-4 lg:mb-0 lg:flex-row">
+						<div class="lg:w-[50%] flex flex-col gap-4">
+							<div
+								class="flex flex-row bg-[#FFEFF0] px-4 py-4 rounded-3xl items-center gap-4"
+							>
+								<img
+									class="bg-red-500 p-2 w-11 h-11 rounded-full"
+									src="assets/printer.svg"
+									alt="printer Icon"
+								/>
+								<div class="flex flex-col">
+									<p class="font-easy-p font-normal">
+										Dispositivos customizados de hardware,
+										para
+										<span class="font-bold"
+											>digitalização rápida de canhoto de
+											Nota Fiscal, Dacte e outros tipos de
+											comprovantes,</span
+										>
+										em todas as suas filiais.
+									</p>
+								</div>
+							</div>
+							<div
+								class="flex flex-row bg-[#FFEFF0] px-4 py-4 rounded-3xl items-center gap-4"
+							>
+								<img
+									class="bg-red-500 p-2 w-11 h-11 rounded-full"
+									src="assets/computer.svg"
+									alt="computerIcon"
+								/>
+								<div class="flex flex-col">
+									<p class="font-easy-p font-normal">
+										Um
+										<span class="font-bold">
+											software inteligente para realizar a
+											leitura desses documentos</span
+										>
+										de forma automatizada, rápida e
+										assertiva.
+									</p>
+								</div>
+							</div>
+							<div
+								class="flex flex-row bg-[#FFEFF0] px-4 py-4 rounded-3xl items-center gap-4"
+							>
+								<img
+									class="bg-red-500 p-2 w-11 h-11 rounded-full"
+									src="assets/light.svg"
+									alt="bulb Icon"
+								/>
+								<div class="flex flex-col">
+									<p class="font-easy-p font-normal">
+										Esses
+										<span class="font-bold"
+											>equipamentos transformam o
+											documento em um arquivo
+											digital,</span
+										>
+										com ótima qualidade de imagem. E por
+										serem
+										<span class="font-bold"
+											>integrados com o TMS,</span
+										>
+										poderão disponibilizar a informação para
+										seus clientes, no menor tempo possível.
+									</p>
+								</div>
+							</div>
+						</div>
+						<img
+							class="lg:w-[50%] h-auto"
+							src="assets/contato.png"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<button
+						class="font-readex-pro px-6 mx-auto py-4 flex flex-row gap-2 items-center rounded-lg box-red shadow-xl"
+					>
+						Solicite uma demonstração
+						<svg
+							width="13"
+							height="13"
+							viewBox="0 0 13 13"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12.5787 1.1967C12.5787 0.644416 12.131 0.196701 11.5787 0.196701L2.57874 0.196701C2.02645 0.196701 1.57874 0.644416 1.57874 1.1967C1.57874 1.74899 2.02645 2.1967 2.57874 2.1967L10.5787 2.1967L10.5787 10.1967C10.5787 10.749 11.0265 11.1967 11.5787 11.1967C12.131 11.1967 12.5787 10.749 12.5787 10.1967L12.5787 1.1967ZM10.8716 0.489594L0.265027 11.0962L1.67924 12.5104L12.2858 1.90381L10.8716 0.489594Z"
+								fill="#FFFFFF"
+								class="svg-path"
+							/>
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class="bg-black flex flex-col gap-12 pt-12 pb-20">
+				<div class="w-[60%] mx-auto text-center">
+					<h2 class="font-easy-H2 text-white">
+						Leve sua Transportadora a um novo patamar com a Easy Doc
+					</h2>
+					<p class="font-easy-p text-white">
+						Os benefícios das soluções Easy Doc resultam em
+						melhorias concretas para sua Transportadora, como:
+					</p>
+				</div>
+				<div
+					class="w-[80%] mx-auto gap-8 grid grid-cols-1 lg:grid-cols-3 justify-items-center lg:items-center"
+				>
+					<img src="assets/card1.png" />
+					<img src="assets/card2.png" class="pt-2" />
+					<img src="assets/card3.png" />
+				</div>
+			</section>
+			<section class="flex flex-col gap-12 pt-12">
+				<div class="flex flex-col gap-4 text-center w-[80%] mx-auto">
+					<h2 class="font-easy-H2 font-medium">
+						Como é o nosso processo?
+					</h2>
+					<p class="font-easy-p font-semibold">
+						A Easy Doc conta com um processo de excelência para
+						fornecer a você uma solução personalizada e específica
+						para as suas necessidades.
+					</p>
+				</div>
+				<div class="mx-auto md:w-[90%] lg:w-[80%] md:mx-auto">
+					<img class="w-full" src="assets/processo.png" />
+				</div>
+				<div>
+					<button
+						class="font-readex-pro px-6 mx-auto py-4 flex flex-row gap-2 items-center rounded-lg box-red shadow-xl"
+					>
+						Fale com um consultor
+						<svg
+							width="13"
+							height="13"
+							viewBox="0 0 13 13"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M12.5787 1.1967C12.5787 0.644416 12.131 0.196701 11.5787 0.196701L2.57874 0.196701C2.02645 0.196701 1.57874 0.644416 1.57874 1.1967C1.57874 1.74899 2.02645 2.1967 2.57874 2.1967L10.5787 2.1967L10.5787 10.1967C10.5787 10.749 11.0265 11.1967 11.5787 11.1967C12.131 11.1967 12.5787 10.749 12.5787 10.1967L12.5787 1.1967ZM10.8716 0.489594L0.265027 11.0962L1.67924 12.5104L12.2858 1.90381L10.8716 0.489594Z"
+								fill="#FFFFFF"
+								class="svg-path"
+							/>
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class="flex flex-col lg:flex-row mt-12">
+				<div
+					class="pr-10 gap-8 flex justify-center lg:w-[50%] lg:justify-end lg:pt-12 bg-[#F4F4F4]"
+				>
+					<div
+						class="flex flex-col gap-8 mb-12 lg:justify-end text-center w-[70%]"
+					>
+						<h3 class="font-easy-H3 font-medium">
+							Case de sucesso: Bora Transportes e os desaﬁos do
+							crescimento acelerado
+						</h3>
+						<p class="font-easy-p-reduzida">
+							A Bora Transportes é uma transportadora que realiza
+							a transferência e distribuição de alimentos nas
+							regiões Norte, Nordeste, MG e ES.
+						</p>
+						<p class="font-easy-p-reduzida">
+							Com 21 anos, enfrentou, juntamente com o crescimento
+							e o sucesso, os mesmos desaﬁos citados acima. Então
+							contou com nossas soluções para alcançar um novo
+							patamar de eficiência e organização.
+						</p>
+						<img
+							class="max-w-72 mx-auto"
+							src="assets/numbers.png"
+							alt="Números da Bora Transportes"
+						/>
+						<button
+							class="flex self-center w-fit flex-row gap-4 py-10 px-6 rounded-3xl items-center font-easy-p-reduzida font-medium box-white"
+						>
+							<img
+								class="h-8"
+								src="assets/play.svg"
+								alt="Play Icon"
+							/>
+							Assista o case da Bora Transportes completo!
+						</button>
+					</div>
+				</div>
+				<div class="lg:w-[50%] min-md:w-[50%] aspect-video">
+					<iframe
+						class="w-full h-full"
+						src="https://www.youtube.com/embed/VZrQs3gulyI?si=3kVcI_9AgCUScjil&amp;controls=0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+			</section>
+			<section class="pt-12 flex flex-col gap-12 pb-20">
+				<div class="carousel-container">
+					<div class="carousel">
+						<div class="carousel-item">
+							<img src="assets/Yoki.png" alt="Logo Yoki" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Luft.png" alt="Logo Luft" />
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/Goodyear.png"
+								alt="Logo Goodyear"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Danone.png" alt="Logo Danone" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Arno.png" alt="Logo Arno" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Ache.png" alt="Logo Aché" />
+						</div>
+						<div>
+							<img
+								src="assets/Solistica.png"
+								alt="Logo Solistica"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Ceratti.png" alt="Logo Cerrati" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Yoki.png" alt="Logo Yoki" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Luft.png" alt="Logo Luft" />
+						</div>
+						<div class="carousel-item">
+							<img
+								src="assets/Goodyear.png"
+								alt="Logo Goodyear"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Danone.png" alt="Logo Danone" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Arno.png" alt="Logo Arno" />
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Ache.png" alt="Logo Aché" />
+						</div>
+						<div>
+							<img
+								src="assets/Solistica.png"
+								alt="Logo Solistica"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img src="assets/Ceratti.png" alt="Logo Cerrati" />
+						</div>
+					</div>
+				</div>
+				<div class="mx-auto md:w-[80%]">
+					<img class="h-auto w-full" src="assets/CTA_2.png" />
+				</div>
+			</section>
+			<section class="pt-12 flex flex-col w-[80%] mx-auto gap-12 pb-20">
+				<h1
+					class="font-easy-H1 lg:w-[70%] text-center mx-auto font-semibold"
+				>
+					Vamos conversar: entre em contato conosco e descubra como
+					podemos impulsionar o sucesso da sua empresa!
+				</h1>
+				<form
+					id="contactForm"
+					action="https://httpbin.org/post"
+					method="post"
+					class="bg-[#FFF6F7] px-8 rounded-3xl shadow-lg py-6"
+				>
+					<div
+						class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8s"
+					>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_name"
+								class="font-easy-H4 font-bold"
+								>Nome <span class="text-red-500">•</span></label
+							>
+							<input
+								type="text"
+								name="nome"
+								id="form_name"
+								placeholder="Digite seu nome"
+								class="py-4 px-8"
+							/>
+						</div>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_email"
+								class="font-easy-H4 font-bold"
+								>E-mail
+								<span class="text-red-500">•</span></label
+							>
+							<input
+								type="email"
+								name="email"
+								id="form_email"
+								placeholder="Digite seu email"
+								class="py-4 px-8"
+							/>
+						</div>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_telefone"
+								class="font-easy-H4 font-bold"
+								>Telefone
+								<span class="text-red-500">•</span></label
+							>
+							<input
+								type="tel"
+								name="telefone"
+								id="form_telefone"
+								placeholder="(00) 00000-0000"
+								class="py-4 px-8"
+							/>
+						</div>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_empresa"
+								class="font-easy-H4 font-bold"
+								>Empresa
+								<span class="text-red-500">•</span></label
+							>
+							<input
+								type="text"
+								name="empresa"
+								id="form_empresa"
+								placeholder="Digite aqui sua empresa"
+								class="py-4 px-8"
+							/>
+						</div>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_estado"
+								class="font-easy-H4 font-bold"
+								>Estado</label
+							>
+							<input
+								type="text"
+								name="estado"
+								id="form_estado"
+								placeholder="Digite aqui seu estado"
+								class="py-4 px-8"
+							/>
+						</div>
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_cidade"
+								class="font-easy-H4 font-bold"
+								>Cidade</label
+							>
+							<input
+								type="text"
+								name="cidade"
+								id="form_cidade"
+								placeholder="Digite aqui sua cidade"
+								class="py-4 px-8"
+							/>
+						</div>
+					</div>
+					<div class="w-full">
+						<div class="flex flex-col gap-4">
+							<label
+								for="form_mensagem"
+								class="font-easy-H4 font-bold"
+								>Mensagem</label
+							>
+							<textarea
+								name="mensagem"
+								id="form_mensagem"
+								placeholder="Escreva detalhes da sua mensagem"
+								class="py-4 px-8 w-full min-h-[10rem] text-left leading-tight"
+							></textarea>
+						</div>
+					</div>
+					<div class="flex mt-12 justify-end">
+						<button
+							class="box-red w-fit py-4 px-6 items-center flex flex-row gap-2 rounded-xl font-easy-p-destacada font-medium"
+						>
+							Enviar Solicitação
+							<img src="assets/send.svg" alt="send form icon" />
+						</button>
+					</div>
+				</form>
+			</section>
+			<footer
+				class="border-t-4 border-[#D10010] bg-black flex text-white flex-row gap-4 items-center justify-center py-4"
+			>
+				<div class="w-[80%] mx-auto flex flex-col">
+					<div
+						class="w-full flex justify-between items-center border-b-2 p-2 border-[#232323]"
+					>
+						<div class="flex flex-row">
+							<img src="assets/footer_icon.svg" />
+							<p class="font-easy-p-destacada font-bold hidden md:flex">|</p>
+							<p
+								class="font-easy-p-reduzida ml-4 md:ml-0 w-auto md:whitespace-nowrapx"
+							>
+								Todos os Direitos Reservados
+							</p>
+						</div>
+						<div class="flex flex-row items-center gap-4">
+							<h4
+								class="font-easy-H4 hidden lg:flex font-semibold"
+							>
+								Comos podemos ajudar
+							</h4>
+							<button
+								class="border-2 border-[#D10010] rounded-xl h-fit hidden md:flex md:px-2 lg:px-4 py-2"
+							>
+								+55 (11) 2227.3076
+							</button>
+						</div>
+					</div>
+					<div class="py-8 flex flex-col md:flex-row justify-between">
+						<p class="font-easy-p-reduzida">
+							Rua Lauro Luchesi, 381, Jardim Leonor Mendes de
+							Barros, São Paulo - SP, CEP 02348-090
+						</p>
+						<p class="font-easy-p-reduzida">
+							Desenvolvido por
+							<a
+								class="font-bold"
+								target="_blank"
+								href="http://github.com/motamarcelo"
+								>Marcelo Mota</a
+							>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>

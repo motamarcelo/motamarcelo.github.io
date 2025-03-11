@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Readex+Pro:wght@160..700&display=swap');
+
+.font-open-sans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.font-readex-pro {
+	font-family: 'Readex Pro', sans-serif;
+}
+
+.font-open-sans {
+	font-family: sans-serif;
+}
+
+.font-easy-H1 {
+	font-family: 'Readex Pro', sans-serif;
+	line-height: 3rem;
+	font-size: 2.5rem;
+}
+
+.font-easy-H2 {
+	font-family: 'Readex Pro', sans-serif;
+	line-height: 3rem;
+	font-size: 2.125rem;
+}
+
+.font-easy-H3 {
+	font-family: 'Readex Pro', sans-serif;
+	line-height: 3rem;
+	font-size: 1.75rem;
+}
+
+.font-easy-H4 {
+	font-family: 'Readex Pro', sans-serif;
+	line-height: 3rem;
+	font-size: 1.2rem;
+}
+
+.font-easy-p {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 2.125rem;
+	font-size: 1.125rem;
+	font-weight: 300;
+}
+
+.font-easy-p-destacada {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.875rem;
+	font-size: 1.25rem;
+}
+
+.font-easy-p-reduzida {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.875rem;
+	font-size: 1rem;
+}
+
+.box-red {
+	background-color: #d10010;
+	color: white;
+}
+
+.box-red:hover {
+	background-color: white;
+	color: #d10010;
+}
+
+.box-red:hover .svg-path {
+	fill: #d10010;
+}
+
+.box-white {
+	background-color: white;
+	color: #d10010;
+}
+
+.box-white:hover {
+	background-color: #d10010;
+	color: white;
+}
+
+.box-white:hover .svg-path {
+	fill: #ffffff;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 6rem; /* Espaço entre as imagens */
+    animation: scroll 20s linear infinite; /* Animação automática */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Não permite que os itens cresçam ou encolham */
+    width: 8rem; /* Ajuste a largura conforme necessário */
+	height: fit-content;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajuste para 'contain' para evitar cortes */
+}
+
+/* Animação para rolar o carrossel */
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%); /* Rola para a esquerda */
+	}
+}
